@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./shared/head')%>
+<body>
+  <%- include('./shared/header')%>
+  <h1>Todas nuestras sucursales</h1>
+
+  <%for (let sucursal of sucursales) {%>
+  <article>
+    <h3><a href="/sucursales/<%- sucursal.sucursal%>"><%- sucursal.sucursal%></a></h3>
+    <span><%- sucursal.direccion%></span>
+    <br>
+    <span><%- sucursal.telefono%></span>
+  </article>
+  <%}%>
+</body>
+</html>

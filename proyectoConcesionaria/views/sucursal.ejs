@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./shared/head')%>
+<body>
+  <%- include('./shared/header')%>
+  <h1>Sucursal <%- sucursal.sucursal%></h1>
+  <section>
+    <h3><%- sucursal.direccion%></h3>
+    <span><%- sucursal.telefono%></span>
+  </section>
+  <section>
+    <h2>Nuestros autos</h2>
+    <span>Tenemos un total de <%- sucursal.autos.length%> autos</span>
+
+    <div>
+      <%for (let auto of sucursal.autos) {%>
+        <article>
+          <h3><%- auto.marca%> <%- auto.modelo%></h3>
+          <span>Año <%-auto.anio%></span>
+          <br>
+          <span><%- auto.color%></span>
+        </article>
+
+        <%}%>
+    </div>
+  </section>
+</body>
+</html>
