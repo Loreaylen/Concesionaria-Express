@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <%- include('./shared/head')%>
+</head>
+<body>
+  <%- include('./shared/header')%>
+  <h1>Marcas disponibles</h1>
+  <p>En nuestras sucursales podrás encontrar las siguientes marcas de autos:</p>
+  <ul>
+    <%for(let marca of marcas) {%>
+      <li><%-marca%></li>
+      <%}%>
+  </ul>
+</body>
+</html>
