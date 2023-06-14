@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+ <%- include('./shared/head')%>
   <body>
+    <%- include('./shared/header')%>
     <h1>Bienvenido a la Concesionaria Express</h1>
    <p>Por favor, elige una concesionaria de las disponibles: </p>
 <ul>
@@ -12,7 +10,5 @@
     <li><a href="/sucursales/<%- sucursal.sucursal%>"><%- sucursal.sucursal%></a></li>
     <% } %>
 </ul>
-   
-
   </body>
 </html>

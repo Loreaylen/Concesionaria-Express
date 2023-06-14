@@ -3,7 +3,7 @@ const concesionarias = JSON.parse(fs.readFileSync('./data/concesionarias.json', 
 
 const indexControl = {
 'getHome':  function(req, res) {
-res.render('index', {title: 'Concesionaria Express', concesionarias: concesionarias})
+res.render('index', {title: 'Concesionaria Express', site: 'Home', concesionarias: concesionarias})
 }
 }
 
