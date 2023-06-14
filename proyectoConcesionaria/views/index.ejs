@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+ <%- include('./shared/head')%>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%- include('./shared/header')%>
+    <h1>Bienvenido a la Concesionaria Express</h1>
+   <p>Por favor, elige una concesionaria de las disponibles: </p>
+<ul>
+  <%for (let sucursal of concesionarias) {%>
+    <li><a href="/sucursales/<%- sucursal.sucursal%>"><%- sucursal.sucursal%></a></li>
+    <% } %>
+</ul>
   </body>
 </html>
