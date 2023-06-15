@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./shared/head')%>
-<body>
-  <%- include('./shared/header')%>
-  <h1>Sucursal <%- sucursal.sucursal%></h1>
-  <section>
-    <h3><%- sucursal.direccion%></h3>
-    <span><%- sucursal.telefono%></span>
-  </section>
-  <section>
-    <h2>Nuestros autos</h2>
-    <span>Tenemos un total de <%- sucursal.autos.length%> autos</span>
+  <%- include('./shared/head')%>
+  <body>
+    <%- include('./shared/header')%>
+    <main class="vistaSucursal">
+      <section class="datosSucursal">
+        <h1>Sucursal <%- sucursal.sucursal%></h1>
+        <h3><%- sucursal.direccion%></h3>
+        <p><%- sucursal.telefono%></p>
+      </section>
+      <section class="autosSucursal">
+        <div class="infoAutosSucursal">
+          <h2>Nuestros autos</h2>
+          <p>Tenemos un total de <%- sucursal.autos.length%> autos</p>
+        </div>
+        <div class="autosSucursalContenedor">
+          <%for (let auto of sucursal.autos) {%>
+          <article class="autoDeSucursal">
+            <h3><%- auto.marca%> <%- auto.modelo%></h3>
+            <p>Año <%-auto.anio%></p>
+            <p><%- auto.color%></p>
+          </article>
+          <%}%>
+        </div>
+      </section>
+    </main>
 
-    <div>
-      <%for (let auto of sucursal.autos) {%>
-        <article>
-          <h3><%- auto.marca%> <%- auto.modelo%></h3>
-          <span>Año <%-auto.anio%></span>
-          <br>
-          <span><%- auto.color%></span>
-        </article>
-
-        <%}%>
-    </div>
-  </section>
-  <%- include('./shared/footer')%>
-</body>
+    <%- include('./shared/footer')%>
+  </body>
 </html>
