@@ -11,6 +11,7 @@ res.render('index', {title: 'Concesionaria Express', site: 'Home', concesionaria
   if(!rutas.includes(opcion)){
     res.render('noEncontrado', {site: 404})
   }
+  else return
 }
 }
 
