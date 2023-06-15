@@ -15,7 +15,10 @@ res.render('autos', {site: 'Autos', autos:agrupados})
 const marca = req.params.marca 
 const dato = req.params.dato
 const porDato = incluye(agrupados[marca], dato)
-res.render('datos', {site: `Datos de ${marca}`,marcaAuto: marca, autos: porDato, mensaje: 'No hay resultados'})
+if(porDato.length > 0){
+  res.render('datos', {site: `Datos de ${marca}`,marcaAuto: marca, autos: porDato})
+}
+else res.render('noEncontrado', {site: '404'})
 }
 }
 

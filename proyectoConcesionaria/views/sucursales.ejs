@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('./shared/head')%>
-<body>
-  <%- include('./shared/header')%>
-  <h1>Todas nuestras sucursales</h1>
+<%- include('./shared/head')%>
+  <body>
+    <%- include('./shared/header')%>
+      <section class="sucursales">
+        <h1>Todas nuestras sucursales</h1>
+        <div class="listaSucursales">
+          <%for (let sucursal of sucursales) {%>
+            <a href="/sucursales/<%- sucursal.sucursal%>">
+            <article class="infoSucursal">
+              <h3 class="nombreSucursal"><i class="fa-solid fa-location-dot"></i><%- sucursal.sucursal%></h3>
+              <p><%- sucursal.direccion%></p>
+              <p><%- sucursal.telefono%></p>
+            </article>
+            </a>
+            <%}%>
+        </div>
+      </section>
+      <%- include('./shared/footer')%>
+  </body>
 
-  <%for (let sucursal of sucursales) {%>
-  <article>
-    <h3><a href="/sucursales/<%- sucursal.sucursal%>"><%- sucursal.sucursal%></a></h3>
-    <span><%- sucursal.direccion%></span>
-    <br>
-    <span><%- sucursal.telefono%></span>
-  </article>
-  <%}%>
-  <%- include('./shared/footer')%>
-</body>
 </html>

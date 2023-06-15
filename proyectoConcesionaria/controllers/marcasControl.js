@@ -14,9 +14,7 @@ res.render('marcas', {site: 'Marcas', marcas: marcas})
   if(marcaElegida.length > 0){
     res.render('marca', {site: marca, marcaElegida: marcaElegida})
   }
-  else {
-    res.render('marca', {site: marca, marcaElegida: marcaElegida, mensaje: "No hay datos"})
-  }
+  else res.render('noEncontrado', {site: '404'})
 }
 }
 
