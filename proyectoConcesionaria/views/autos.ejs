@@ -3,22 +3,26 @@
  <%- include('./shared/head')%>
   <body>
     <%- include('./shared/header')%>
+    <main class="vistaAutos">
     <h1>Todos nuestros autos</h1>
-<section>
+<section class="contenedorAutos">
  <% for(let auto in autos){ %>
   <% const modelo = autos[auto] %>
-    <article>
+    <article class="marcaAuto">
       <h2><a href="/autos/<%-auto%>"><%-auto%></a></h2>
+      <div class="contenedorModelos">
     <% for(let marca of modelo){ %>
-    <div>
-      <h3><%- marca.modelo %></h3>
+        <div class="modeloAuto">
+          <h3><%- marca.modelo %></h3>
           <p>Año: <%- marca.anio %></p>
           <p>Color: "<%- marca.color %>"</p>
-    </div>
+        </div>
     <%}%>
+      </div>
     </article>
   <%}%>
 </section>
+</main>
 <%- include('./shared/footer')%>
   </body>
 </html>

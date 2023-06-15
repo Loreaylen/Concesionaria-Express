@@ -214,9 +214,15 @@ list-style-type: none;
 
 /*SUCURSALES*/
 
+.vistaSucursales {
+  width: 100%;
+  height: auto;
+  padding:30px;
+}
+
 .sucursales {
   width: 100%;
-  height: 55vh;
+  height: 600px;
   margin:auto;
   display: flex;
   flex-direction: column;
@@ -268,4 +274,111 @@ list-style-type: none;
 font-size: 30px;
 margin-right: 10px;
 
+}
+
+/*SUCURSAL*/
+
+.vistaSucursal {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+}
+
+.vistaSucursal {
+  font-family: var(--fuente-titulo);
+}
+
+.datosSucursal {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.autosSucursal {
+  width: 100%;
+  height: auto;
+}
+
+.infoAutosSucursal {
+  width: 100%;
+  height: auto;
+  margin: 30px;
+}
+
+/*AUTOS*/
+
+.vistaAutos {
+  width: 100%;
+  height: auto;
+}
+
+.vistaAutos h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 42px;
+  color: var(--color-oscuro);
+  margin: 30px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenedorAutos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.marcaAuto {
+  width: 100%;
+  height: auto;
+}
+
+.marcaAuto h2 {
+  height: 100px;
+  width: 100%;
+  background-color: var(--color-claro);
+  font-family: var(--fuente-titulo);
+  font-size: 36px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.marcaAuto a {
+  text-decoration: none;
+  color:var(--color-oscuro);
+  cursor:pointer;
+}
+
+.contenedorModelos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modeloAuto {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modeloAuto h3 {
+  font-family: var(--fuente-titulo);
+  text-transform: capitalize;
+  font-size: 28px;
+}
+
+.modeloAuto p {
+  font-family: var(--fuente-cuerpo);
+  font-size: 18px;
 }
