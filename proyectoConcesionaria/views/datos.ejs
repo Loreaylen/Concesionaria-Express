@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <%- include('./shared/head')%>
+  <body>
+    <%- include('./shared/header')%>
+    <% if (autos.length > 0) { %>
+      <section>
+    <h1>Todos los resultados para autos <%- marcaAuto %> </h1>
+        <% for (let auto of autos) { %>
+          <article>
+            <h2><%- auto.modelo %></h2>
+            <p>Año: <%- auto.anio %></p>
+            <p>Color: "<%- auto.color %>"</p>
+          </article>
+        <% } %>
+      </section>
+    <% } else { %>
+     <section><h1><%- mensaje %></h1></section>
+    <% } %>
+  </body>
+</html>

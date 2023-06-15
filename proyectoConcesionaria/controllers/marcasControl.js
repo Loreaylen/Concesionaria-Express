@@ -1,7 +1,7 @@
 const fs = require('fs')
 const concesionarias = JSON.parse(fs.readFileSync('./data/concesionarias.json'), {encoding: 'utf-8'})
 const {extraerMarcas, eliminarRepetidos} = require('../utils/filtrarYagrupar')
-const datosMarcas = extraerMarcas(concesionarias)
+const datosMarcas = extraerMarcas(concesionarias, 'autos')
 
 const marcasControl = {
 'mostrarMarcas': function(req, res) {

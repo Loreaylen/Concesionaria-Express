@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <%- include('./shared/head')%>
+  <body>
+    <%- include('./shared/header')%>
+    <h1>Todos nuestros autos</h1>
+<section>
+ <% for(let auto in autos){ %>
+  <% const modelo = autos[auto] %>
+    <article>
+      <h2><a href="/autos/<%-auto%>"><%-auto%></a></h2>
+    <% for(let marca of modelo){ %>
+    <div>
+      <h3><%- marca.modelo %></h3>
+          <p>Año: <%- marca.anio %></p>
+          <p>Color: "<%- marca.color %>"</p>
+    </div>
+    <%}%>
+    </article>
+  <%}%>
+</section>
+  </body>
+</html>
