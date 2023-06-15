@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const {todosLosAutos, autosPorMarca, datosMarca} = require('../controllers/autosControl')
+const {todosLosAutos,  datosMarca} = require('../controllers/autosControl')
+const { traerMarca } = require('../controllers/marcasControl')
 
 router.get('/', todosLosAutos)
-router.get('/:marca', autosPorMarca)
+router.get('/:marca', traerMarca)
 router.get('/:marca/:dato', datosMarca)
 
 module.exports = router

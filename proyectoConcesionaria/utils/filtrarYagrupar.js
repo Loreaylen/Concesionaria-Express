@@ -32,7 +32,7 @@ const funciones = {
   'buscar': (obj, val) => {
      const arrEntries = Object.entries(obj)
      const par = arrEntries.find(el => el[1] == val)
-    return par ? par[0] : false
+    return par ? par[0] :  "Sin coincidencias"
   },
   'incluye': function(arrObj, val){
     const incluidos = []
@@ -46,12 +46,5 @@ const funciones = {
    return incluidos
   }
 }
-
-/*console.log('el', el)
-const valores = Object.values(agrupados[marca])
-if(valores.includes(dato)){
-  return el
-}
-} */
 
 module.exports = funciones;

@@ -1,6 +1,6 @@
 const fs = require('fs')
 const concesionarias = JSON.parse(fs.readFileSync('./data/concesionarias.json'), {encoding: 'utf-8'})
-const {extraerMarcas, agrupar, incluye} = require('../utils/filtrarYagrupar')
+const {extraerMarcas, agrupar, incluye } = require('../utils/filtrarYagrupar')
 const {traerMarca} = require ('../controllers/marcasControl')
 
 const datosAutos = extraerMarcas(concesionarias, 'autos')
@@ -10,9 +10,6 @@ const agrupados = agrupar(ordenAlfabetico, 'marca')
 const autosControl = {
 'todosLosAutos': function(req, res){
 res.render('autos', {site: 'Autos', autos:agrupados})
-},
-'autosPorMarca': function(req, res){
-traerMarca(req, res)
 },
 'datosMarca': function(req, res){
 const marca = req.params.marca 
