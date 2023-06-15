@@ -6,8 +6,7 @@ const funciones = {
     }
     return acc
      }, [])
-  const array2 = array.map(el => el.marca)
-  return array2
+  return array
 },
 'eliminarRepetidos': function(arr) {
   const alfabetico = arr.sort()

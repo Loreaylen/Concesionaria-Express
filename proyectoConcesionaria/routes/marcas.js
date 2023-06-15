@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const marcasControl = require('../controllers/marcasControl')
+const {mostrarMarcas, traerMarca} = require('../controllers/marcasControl')
 
-router.get('/', marcasControl.mostrarMarcas)
+router.get('/', mostrarMarcas)
+router.get('/:marca', traerMarca)
 
 module.exports = router;

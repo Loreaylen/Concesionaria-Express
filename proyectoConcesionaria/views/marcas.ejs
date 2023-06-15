@@ -9,7 +9,7 @@
   <p>En nuestras sucursales podrás encontrar las siguientes marcas de autos:</p>
   <ul>
     <%for(let marca of marcas) {%>
-      <li><%-marca%></li>
+      <li><a href="/marcas/<%-marca%>"><%-marca%></a></li>
       <%}%>
   </ul>
 </body>
