@@ -2,6 +2,7 @@
 <html lang="es">
   <%- include('./shared/head')%>
 <body>
+  <%- include('./shared/header')%>
   <h1>Todas nuestras sucursales</h1>
 
   <%for (let sucursal of sucursales) {%>
@@ -12,5 +13,6 @@
     <span><%- sucursal.telefono%></span>
   </article>
   <%}%>
+  <%- include('./shared/footer')%>
 </body>
 </html>
