@@ -9,6 +9,8 @@ const sucursalesRouter = require('./routes/sucursales');
 const marcasRouter = require('./routes/marcas')
 const autosRouter = require('./routes/autos')
 
+const {getError} = require('./controllers/indexControl')
+
 var app = express();
 
 // view engine setup
@@ -25,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/sucursales', sucursalesRouter);
 app.use('/marcas', marcasRouter)
 app.use('/autos', autosRouter)
+app.use('*', getError)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
