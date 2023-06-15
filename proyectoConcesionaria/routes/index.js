@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const indexControl = require('../controllers/indexControl')
+const {getHome, getError} = require('../controllers/indexControl')
 
 /* GET home page. */
-router.get('/', indexControl.getHome);
-
+router.get('/', getHome);
+router.get('/:opcion', getError);
 
 module.exports = router;

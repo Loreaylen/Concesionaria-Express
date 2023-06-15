@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
- <%- include('./shared/head')%>
+  <%- include('./shared/head')%>
   <body>
     <%- include('./shared/header')%>
-    <h1>Bienvenido a la Concesionaria Express</h1>
-   <p>Por favor, elige una concesionaria de las disponibles: </p>
-<ul>
-  <%for (let sucursal of concesionarias) {%>
-    <li><a href="/sucursales/<%- sucursal.sucursal%>"><%- sucursal.sucursal%></a></li>
+    <section class="presentacion">
+      <div class="textoPresentacion">
+        <h1>Bienvenido a la Concesionaria Express</h1>
+        <p>
+          Concesionaria Express es un referente en el mundo automotriz,
+          destacándose por su amplia red de sucursales que abarcan todo el país.
+          Con una trayectoria sólida y compromiso con la calidad, se especializa
+          en ofrecer una variedad de marcas líderes en la industria, brindando a
+          sus clientes una experiencia excepcional en la adquisición de vehículos.
+          Ya sea que estés buscando un elegante sedán, un versátil SUV o un
+          deportivo de alto rendimiento, Concesionaria Express te garantiza una
+          atención personalizada y una amplia gama de opciones para encontrar el
+          auto de tus sueños.
+        </p>  
+      </div>  
+      <div class="imagenAuto">
+        <img src="https://www.megautos.com/wp-content/uploads/2021/12/VW-Gol-adelante.jpg" alt="gol volkswagen">
+      </div>
+    </section>
+   <section class="listaConcesionarias">
+  <h3>Por favor, elige una concesionaria de las disponibles:</h3>
+  <ul>
+    <%for (let sucursal of concesionarias) {%>
+    <li>
+      <a href="/sucursales/<%- sucursal.sucursal%>"
+        ><%- sucursal.sucursal%></a
+      >
+    </li>
     <% } %>
-</ul>
-<%- include('./shared/footer')%>
+  </ul>
+</section>
+    
+    <%- include('./shared/footer')%>
   </body>
 </html>

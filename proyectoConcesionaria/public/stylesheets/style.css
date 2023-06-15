@@ -1,6 +1,6 @@
 :root {
   --color-oscuro: #001f3f;
-  --color-claro: #f8f8f8;
+  --color-claro: #9b9999;
   --color-blanco: #ffffff;
 
   --fuente-titulo: "Roboto", sans-serif;
@@ -23,6 +23,7 @@ header {
 .logoContenedor {
   width: 150px;
   height: auto;
+  margin-left: 10px;
 }
 .logo {
   width: 100%;
@@ -103,5 +104,62 @@ list-style-type: none;
 
 .svg-inline--fa {
  font-size: 30px;
- color: var(--color-claro)
+ color: var(--color-claro);
+ cursor:pointer;
+}
+
+/*Index*/
+
+.presentacion {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.textoPresentacion {
+  width: 50%;
+  height: auto;
+  padding: 30px;
+}
+
+.textoPresentacion h1 {
+  font-family: var(--fuente-titulo);
+  color: var(--color-oscuro);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.textoPresentacion p {
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+}
+
+.imagenAuto {
+  width: 50%;
+}
+
+.imagenAuto img {
+  width: 100%;
+  height: auto;
+}
+
+/*NO ENCONTRADO*/
+
+.noEncontrado {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.noEncontrado h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 50px;
+  color: var(--color-claro)
 }
