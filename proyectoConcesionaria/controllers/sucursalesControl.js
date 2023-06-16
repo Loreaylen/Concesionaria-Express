@@ -8,7 +8,6 @@ const sucursalesControl = {
   'traerSucursal': function(req, res) {
     const nombreSucursal = req.params.sucursal
     const sucursal = sucursales.find(el => el.sucursal === nombreSucursal)
-    console.log(sucursales.find(el => el.sucursal === nombreSucursal))
     if(sucursal) {
       res.render('sucursal', {site: sucursal.sucursal, sucursal: sucursal})
     }

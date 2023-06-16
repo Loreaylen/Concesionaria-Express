@@ -290,9 +290,24 @@ margin-right: 10px;
 
 .datosSucursal {
 display: flex;
-flex-direction: column;
 align-items: center;
 justify-content: space-around;
+flex-wrap: wrap;
+}
+
+
+.textoDatosSucursal h1 {
+  font-size: 60px;
+  color: var(--color-oscuro);
+}
+
+.imagenDatosSucursal {
+  width: 40%;
+}
+
+.imagenDatosSucursal img{
+width: 100%;
+height: auto;
 }
 
 .autosSucursal {
