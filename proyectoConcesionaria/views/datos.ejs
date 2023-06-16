@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
- <%- include('./shared/head')%>
+  <%- include('./shared/head')%>
   <body>
     <%- include('./shared/header')%>
-      <section>
-    <h1>Todos los resultados para autos <%- marcaAuto %> </h1>
+    <main class="vistaDatos">
+      <section class="tituloDatos">
+        <h1>Todos los resultados para autos <%- marcaAuto %></h1>
+      </section>
+      <section class="contenedorDatos">
         <% for (let auto of autos) { %>
-          <article>
-            <h2><%- auto.modelo %></h2>
-            <p>Año: <%- auto.anio %></p>
-            <p>Color: "<%- auto.color %>"</p>
-          </article>
+        <article class="datos">
+          <h2><%- auto.modelo %></h2>
+          <p>Año: <%- auto.anio %></p>
+          <p>Color: "<%- auto.color %>"</p>
+        </article>
         <% } %>
       </section>
+    </main>
+
     <%- include('./shared/footer')%>
   </body>
 </html>

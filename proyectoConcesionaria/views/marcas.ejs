@@ -5,13 +5,26 @@
 </head>
 <body>
   <%- include('./shared/header')%>
-  <h1>Marcas disponibles</h1>
-  <p>En nuestras sucursales podrás encontrar las siguientes marcas de autos:</p>
-  <ul>
-    <%for(let marca of marcas) {%>
-      <li><a href="/marcas/<%-marca%>"><%-marca%></a></li>
-      <%}%>
-  </ul>
+  <main class="vistaListaMarcas">
+    <section class="textoVistaMarcas">
+      <h1>Marcas disponibles</h1>
+      <p>Nuestra concesionaria se enorgullece de trabajar con las marcas más confiables y reconocidas de la industria automotriz. Nos esforzamos por ofrecer a nuestros clientes una amplia selección de vehículos de alta calidad y rendimiento. Desde icónicas marcas de lujo hasta fabricantes líderes en el mercado, nuestra variedad de opciones satisface los gustos y necesidades de cada cliente. Trabajamos arduamente para asegurarnos de que cada vehículo en nuestra colección cumpla con los estándares más exigentes de confiabilidad, seguridad y rendimiento. Explora nuestra lista de marcas y descubre el automóvil perfecto para ti.</p>
+
+      <p>En nuestras sucursales podrás encontrar las siguientes marcas de autos:</p>
+    </section>
+    <section class="contenedorListaMarcas">
+        <%for(let marca of marcas) {%>
+          <a href="/marcas/<%-marca%>">
+            <article class="marcaItem">
+              <h3><%-marca%></h3>
+            </article>
+          </a>
+          <%}%>
+    </section>
+    
+    
+  </main>
+  
   <%- include('./shared/footer')%>
 </body>
 </html>
