@@ -5,9 +5,15 @@
     <%- include('./shared/header')%>
     <main class="vistaSucursal">
       <section class="datosSucursal">
-        <h1>Sucursal <%- sucursal.sucursal%></h1>
-        <h3><%- sucursal.direccion%></h3>
-        <p><%- sucursal.telefono%></p>
+        <div class="textoDatosSucursal">
+          <h1>Sucursal <%- sucursal.sucursal%></h1>
+          <h3><%- sucursal.direccion%></h3>
+          <p><%- sucursal.telefono%></p>
+      </div>
+       <div class="imagenDatosSucursal">
+        <img src="<%- sucursal.imagen %>" alt="imagen de sucursal">
+       </div>
+        
       </section>
       <section class="autosSucursal">
         <div class="infoAutosSucursal">

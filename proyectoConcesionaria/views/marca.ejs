@@ -5,11 +5,13 @@
 </head>
 <body>
   <%- include('./shared/header')%>
+  <main class="vistaMarca">
+  
   <% if (marcaElegida.length > 0) { %>
     <h1>Autos de la marca <%- site %></h1>
-    <section>
+    <section class="contenedorMarcas">
       <% for (let auto of marcaElegida) { %>
-        <article>
+        <article class="marca">
           <h2><%- auto.modelo %></h2>
           <p>Año: <%- auto.anio %></p>
           <p>Color: "<%- auto.color %>"</p>
@@ -19,6 +21,7 @@
   <% } else { %>
    <section><h1><%- mensaje %></h1></section>
   <% } %>
+</main>
   <%- include('./shared/footer')%>
 </body>
 </html>
